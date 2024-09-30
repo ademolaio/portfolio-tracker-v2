@@ -1,5 +1,5 @@
 #!/bin/sh
-'''exec' "/Users/deucalion/Developer/Python/Ademola/Investment Fund/portfolio_tracker_v2/venv/bin/python3.11" "$0" "$@"
+'''exec' "/Users/deucalion/Developer/Python/Ademola/Investment Fund/portfolio_tracker_v2/venv/bin/python" "$0" "$@"
 ' '''
 # -*- coding: utf-8 -*-
 import re

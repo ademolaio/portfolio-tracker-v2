@@ -1,6 +1,6 @@
 import requests
-from utils.config import API_KEY
-from utils.exceptions import AlphaVantageAPIError
+from api.config import API_KEY
+from exceptions.exceptions import AlphaVantageAPIError
 
 BASE_URL = 'https://www.alphavantage.co/query'
 
