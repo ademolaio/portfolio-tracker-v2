@@ -1,16 +1,16 @@
 # Portfolio Tracker
 
-An interactive portfolio tracker built with Python and Jupyter Notebook, utilizing Alpha Vantage API for financial data.
+A simple Python-based portfolio tracker using Alpha Vantage's free tier API to fetch stock data and visualize it in a Jupyter Notebook.
 
-## Features
+## Project Structure
 
-- Displays portfolio holdings with ticker, name, exchange, shares owned, and average cost.
-- Caches company information to reduce API calls and handle rate limits.
-- Modular code following clean code principles.
+- `config/` contains configuration files, like dynamic column headers.
+- `data/` contains core data handling code like fetching data, ticker data, and calculations.
+- `utils/` contains helper functions and configurations.
+- `notebooks/` is where you can view the portfolio in a Jupyter Notebook.
+- `tests/` contains unit tests for the various parts of the project.
 
-## Setup Instructions
+## Installation
 
-1. **Clone the Repository**
-
-   ```bash
-   git clone https://github.com/yourusername/portfolio_tracker.git
+1. Clone this repository.
+2. Install the required packages:
