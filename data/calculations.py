@@ -1,7 +1,11 @@
 def calculate_market_value(shares, price):
-    market_value = shares * price
-    return market_value
+    """
+    Calculate the market value by multiplying shares with current price.
+    """
+    return shares * price
 
 def calculate_gains_or_losses(market_value, cost_basis):
-    gains_or_losses = market_value - cost_basis
-    return gains_or_losses
+    """
+    Calculate gains or losses based on the market value and cost basis.
+    """
+    return market_value - cost_basis

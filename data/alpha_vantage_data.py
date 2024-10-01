@@ -1,33 +1,31 @@
 import requests
-from api.config import API_KEY
-from exceptions.exceptions import AlphaVantageAPIError
+from utils.config import API_KEY
+from utils.exceptions import AlphaVantageAPIError
 
 BASE_URL = 'https://www.alphavantage.co/query'
 
+
 def fetch_company_overview(ticker):
     """
-    Fetch the company overview for a given ticker.
-    :param ticker:
-    :return:
+    Fetch the company overview information like Name, Sector, and Industry from Alpha Vantage API.
     """
-
     params = {
         'function': 'OVERVIEW',
         'symbol': ticker,
         'apikey': API_KEY
     }
-
     response = requests.get(BASE_URL, params=params)
-    if response.status_code != 200:
-        raise AlphaVantageAPIError(f"Failed to fetch data for ticker {ticker}: {response.status_code}")
 
-    return response.json()
+    if response.status_code != 200:
+        raise AlphaVantageAPIError(f"Failed to fetch data for {ticker}: {response.status_code}")
+
+    data = response.json()
 
     if 'Name' not in data:
-        raise AlphaVantageAPIError(f"Failed to fetch data for ticker {ticker}")
+        raise AlphaVantageAPIError(f"Invalid data returned for {ticker}")
 
     return {
         'Name': data.get('Name'),
         'Sector': data.get('Sector'),
-        'Industry': data.get('Industry'),
+        'Industry': data.get('Industry')
     }

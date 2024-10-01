@@ -1,3 +1,5 @@
+
+# Dynamic column headers for portfolio data
 COLUMN_HEADERS = [
     'Ticker',
     'Name',
@@ -6,5 +8,3 @@ COLUMN_HEADERS = [
     'Shares',
     'Avg Cost'
 ]
-
-
